@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class='container'>
+        <div id=start-game>
+            <!-- heading -->
+            <h1><span>T</span><span>R</span><span></span><span></span><span></span><span></span>Trivia</h1>
+
+            <!-- play now -->
+            <button id='play'>Play now!</button>
+
+        </div>
+        <div id=game-ongoing>
+            <!-- timer -->
+            <div id='timer'></div>
+
+            <!-- questions -->
+            <div id='right-answer'></div>
+            <div id='question'><h3>Question: <span id='insert-question'></span></h3></div>
+            <div id='insert-answer'></div>
+        </div>
+        <div id=game-over>
+            <!-- announce -->
+            <div id='announce'></div>
+
+            <!-- gif -->
+            <div id='gif'></div>
+
+            <!-- message -->
+            <div id='message'></div>
+        </div>
+    </div>
+
+    
+
+    <script src='assets/javascript/app.js'></script>
+</body>
+</html>
