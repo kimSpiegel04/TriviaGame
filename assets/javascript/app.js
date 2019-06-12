@@ -63,13 +63,13 @@ var clockRunning = false;
 var time = 31;
 
 function reset() {
-    time = 31;
+    time = 30;
     $('#timer').text('30');
     playGame();
     
     j++;
     $("#insert-answer").html("");
-    check();
+    check(j);
     newQuestion(j);
 }
 
@@ -115,7 +115,7 @@ function newQuestion(indOf){
     addIds();
 
     $('div.ansbox').on('click', function(){
-        userClick= $(this).attr("id");
+    userClick= $(this).attr("id");
         if (userClick==gameOrder[indOf].validAnswer){
             correct++;
             $('#right-answer').html(`Correct!`);
@@ -138,6 +138,7 @@ function addIds() {
 
 //if no more questions
 function gameOver(){
+    stopClock();
     $('#game-ongoing').hide();
     $('#game-over').show();
     message();
@@ -153,8 +154,24 @@ function message(){
     }
 }
 
-function check(){
-    if (j==5){
-        gameOver();
-    }
+function check(end){
+    setTimeout(function(){
+        if (end==5){
+            gameOver();
+        }
+    }, 3000);
 }
+
+// $('#insert-answer').mouseover(function(e){
+//     // console.log('yes');
+//     var index = e.target.id;
+//     if(index){
+//         $(this).css("background-color", "yellow");
+//     }
+// });
+
+// setTimeout(function () {
+//     if (j == 5) {
+//         alert('VIDEO HAS STOPPED');
+//     }
+// }, 5000);

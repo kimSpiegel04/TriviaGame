@@ -18,7 +18,9 @@
     <div class='container'>
         <div id=start-game>
             <!-- heading -->
-            <h1><span>T</span><span>R</span><span></span><span></span><span></span><span></span>Trivia</h1>
+            <div id='trivia'>
+                <span>T</span><span>R</span><span>I</span><span>V</span><spanI></span><span>A</span>
+            </div>
 
             <!-- play now -->
             <button id='play'>Play now!</button>
@@ -26,13 +28,19 @@
         </div>
         <div id=game-ongoing>
             <!-- timer -->
-            <div id='timer'></div>
-
-            <!-- questions -->
-            <div id='right-answer'></div>
-            <div id='question'><h3>Question: <span id='insert-question'></span></h3></div>
-            <div id='insert-answer'></div>
+            <div class='row'>
+                <div class='col-md-3'>
+                    <div id='timer'></div>
+                    <div id='right-answer'></div>
+                </div>
+                <!-- questions -->
+                <div class='col-md-9'>                   
+                    <div id='question'> <h3>Question: <span id='insert-question'></span></h3></div>
+                    <div id='insert-answer'></div>
+                </div>
+            </div>
         </div>
+
         <div id=game-over>
             <!-- announce -->
             <div id='announce'></div>
@@ -45,7 +53,6 @@
         </div>
     </div>
 
-    
 
     <script src='assets/javascript/app.js'></script>
 </body>
